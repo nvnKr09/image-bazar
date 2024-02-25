@@ -1,0 +1,48 @@
+.image-card{
+    position: relative;
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    img{
+        width: 100%;
+        aspect-ratio: 1.5;
+        object-fit: cover;
+    }
+    .layer{
+        display: flex;
+        opacity: 0;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        background: hsla(0, 0%, 0%, 0.267);
+        padding: 1rem;
+        transition: 0.2s;
+        .like{
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            top: 1rem;
+            right: 1rem;
+        }
+    }
+    .layer>span{
+        font-size: 1.3em;
+        text-align: center;
+    }
+}
+.image-card:hover .layer {
+    opacity: 1;
+} 
+
+@media screen and (max-width:426px) {
+    .image-card{
+        width: 100%;
+    }
+}
