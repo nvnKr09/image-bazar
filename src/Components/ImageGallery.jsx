@@ -1,16 +1,17 @@
 import React from "react";
-import 'material-icons/iconfont/filled.css';
+import "material-icons/iconfont/filled.css";
 import ImageCard from "./ImageCard";
-import '../Styles/imageGallery.scss';
+import "../Styles/imageGallery.scss";
+import Loader from "./Loader";
 
 const ImageGallery = ({ imageList }) => {
-
   return (
     <div className="gallery">
-      {imageList &&
-        imageList.map((item) => (
-          <ImageCard key={item.id} imageData={item}/>
-        ))}
+      {imageList.length > 0 ? (
+        imageList.map((item) => <ImageCard key={item.id} imageData={item} />)
+      ) : (
+        <Loader />
+      )}
     </div>
   );
 };

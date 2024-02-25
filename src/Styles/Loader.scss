@@ -1,0 +1,30 @@
+.loader-wrapper {
+  padding: 2rem;
+}
+.loader {
+  border: 0.5rem solid #fff;
+  border-radius: 50%;
+  border-top: 0.5rem solid #8b79f2;
+  width: 90px;
+  aspect-ratio: 1;
+  animation: spin 1.5s ease-in-out infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.h4 {
+  text-align: center;
+}
+
+@media screen and (max-width: 426px) {
+  .loader {
+    scale: 0.6;
+  }
+}
