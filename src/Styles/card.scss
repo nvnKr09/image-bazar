@@ -1,48 +1,78 @@
-.image-card{
-    position: relative;
+.image-card {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  cursor: pointer;
+  img {
     width: 100%;
+    aspect-ratio: 1.5;
+    object-fit: cover;
+  }
+  .layer > span {
+    font-size: 1.3em;
+    text-align: center;
+  }
+}
+.layer {
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: hsla(0, 0%, 0%, 0.267);
+  padding: 1rem;
+  transition: 0.2s;
+  .like {
+    position: absolute;
+    right: 0;
+    top: 0;
     display: flex;
+    align-items: center;
+    gap: 8px;
+    top: 1rem;
+    right: 1rem;
+  }
+  .download-btn {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    border: none;
+    height: 30px;
+    width: 40px;
+    border-radius: 6px;
+    opacity: 0.8;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    img{
-        width: 100%;
-        aspect-ratio: 1.5;
-        object-fit: cover;
+    span {
+      width: 25px;
     }
-    .layer{
-        display: flex;
-        opacity: 0;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        color: #fff;
-        background: hsla(0, 0%, 0%, 0.267);
-        padding: 1rem;
-        transition: 0.2s;
-        .like{
-            position: absolute;
-            right: 0;
-            top: 0;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            top: 1rem;
-            right: 1rem;
-        }
-    }
-    .layer>span{
-        font-size: 1.3em;
-        text-align: center;
-    }
+  }
+  .download-btn:hover {
+    opacity: 1;
+  }
+  .download-btn:active {
+    background: hsl(0, 0%, 85%);
+  }
 }
 .image-card:hover .layer {
-    opacity: 1;
-} 
+  visibility: visible;
+  opacity: 1;
+}
 
-@media screen and (max-width:426px) {
-    .image-card{
-        width: 100%;
-    }
+@media screen and (max-width: 426px) {
+  .image-card {
+    width: 100%;
+    max-width: 300px;
+  }
 }

@@ -23,7 +23,7 @@ const Search = ({ setImageList }) => {
         },
       })
       .then((response) => {
-        console.log("fetched data", response.data);
+        // console.log("fetched data", response.data);
         setImageList(response.data.results);
       })
       .catch((error) => {
@@ -40,7 +40,7 @@ const Search = ({ setImageList }) => {
           value={searchQuery}
           placeholder="Search anything..."
           onChange={(e) => setSearchQuery(e.target.value)}
-          autocomplete="off"
+          autoComplete="off"
           spellCheck="false"
         />
         <button type="submit">Search</button>
