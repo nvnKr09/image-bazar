@@ -1,19 +1,19 @@
-.gallery{
+.infinite-scroll-component{
     margin: 2rem 3rem;
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
+    position: relative;
 }
-
 @media screen and (max-width:426px) {
-    .gallery{
+    .infinite-scroll-component{
         margin: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 @media screen and (max-width:376px) {
-    .gallery{
+    .infinite-scroll-component{
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }

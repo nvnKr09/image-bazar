@@ -13,10 +13,9 @@ function App() {
     <div className='App'>
       <div className="header">
         <img src={logo} alt="Logo" height="80px" />
-        <Search setImageList={setImageList}/>
       </div>
-      <ImageGallery imageList={imageList}/>
-      <Footer/>
+        <Search imageList={imageList} setImageList={setImageList}/>
+      {/* <Footer/> */}
     </div>
   );
 }

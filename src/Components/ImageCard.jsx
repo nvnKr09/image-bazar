@@ -4,9 +4,11 @@ import "../Styles/card.scss";
 import { saveAs } from "file-saver";
 
 const ImageCard = ({ imageData }) => {
+  // console.log("card Component");
+  
+  // download functionality
   const implementDownload =(imgLink)=>{
     const fileName = imageData.alt_description.replace(/ /g, '+');  //used regex to replace space with "+".
-
     saveAs(imgLink, fileName);
   }
 

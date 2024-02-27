@@ -1,11 +1,13 @@
 .loader-wrapper {
+  width: 100%;
   padding: 2rem;
+  display: flex;
 }
 .loader {
   border: 0.5rem solid #fff;
   border-radius: 50%;
-  border-top: 0.5rem solid #8b79f2;
-  width: 90px;
+  border-top: 6px solid #8b79f2;
+  width: 60px;
   aspect-ratio: 1;
   animation: spin 1.5s ease-in-out infinite;
   margin: auto;
@@ -25,6 +27,6 @@
 
 @media screen and (max-width: 426px) {
   .loader {
-    scale: 0.6;
+    scale: 0.8;
   }
 }
