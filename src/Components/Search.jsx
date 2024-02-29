@@ -27,7 +27,7 @@ const Search = ({ imageList, setImageList }) => {
         },
         params: {
           query: searchQuery || "random",
-          per_page: 15,
+          per_page: 20,
           page: page,
         },
       })

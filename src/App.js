@@ -4,6 +4,7 @@ import Search from './Components/Search';
 import ImageGallery from './Components/ImageGallery';
 import logo from './Assets/logo.png'
 import Footer from './Components/Footer';
+import GoToTopButton from './Components/goToTopButton';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       </div>
         <Search imageList={imageList} setImageList={setImageList}/>
       {/* <Footer/> */}
+      <GoToTopButton/>
     </div>
   );
 }

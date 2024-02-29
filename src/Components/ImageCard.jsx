@@ -8,7 +8,8 @@ const ImageCard = ({ imageData }) => {
   
   // download functionality
   const implementDownload =(imgLink)=>{
-    const fileName = imageData.alt_description.replace(/ /g, '+');  //used regex to replace space with "+".
+    const fileName = imageData.alt_description;
+    // console.log(fileName);
     saveAs(imgLink, fileName);
   }
 
